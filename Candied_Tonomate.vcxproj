@@ -139,23 +139,37 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="Money.cpp" />
     <ClCompile Include="Products.cpp" />
-    <ClCompile Include="RepoSTL.cpp" />
     <ClCompile Include="Service.cpp" />
     <ClCompile Include="Tests.cpp" />
+    <ClCompile Include="Test_Repo.cpp" />
+    <ClCompile Include="Test_RepoSTL.cpp" />
+    <ClCompile Include="Test_Service.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
+    <ClInclude Include="Money.h" />
     <ClInclude Include="Products.h" />
+    <ClInclude Include="Repo.h" />
     <ClInclude Include="RepoSTL.h" />
     <ClInclude Include="Service.h" />
     <ClInclude Include="Tests.h" />
+    <ClInclude Include="Test_RepoSTL.h" />
+    <ClInclude Include="Test_Service.h" />
+    <ClInclude Include="Tets_Repo.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="Products.in" />
     <None Include="Products.out" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Money.txt" />
+    <Text Include="Products.txt" />
+    <Text Include="RepoSTL_Test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

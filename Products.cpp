@@ -7,6 +7,7 @@ using namespace std;
 
 Products::Products()
 {
+	this->id = 0;
 	this->code = NULL;
 	this->name = NULL;
 	this->price = 0.0;
@@ -110,6 +111,16 @@ bool Products::operator==(const Products& p)
 
 ostream& operator<<(ostream& os, const Products& p)
 {
-	os <<"( "<<p.id<< " ) The product: "<< p.name << "(" << p.code << ") cost " << p.price << " RON\n";
+	os <<"("<<p.id<< ") The product: "<< p.name << " (" << p.code << ") cost " << p.price << " RON\n";
 	return os;
+}
+
+istream& operator>>(istream& is, Products& p)
+{
+	if (p.name == NULL)
+		p.name = new char[20];
+	if (p.code == NULL)
+		p.code = new char[20];
+	is >> p.id >> p.code >> p.name >> p.price;
+	return is;
 }

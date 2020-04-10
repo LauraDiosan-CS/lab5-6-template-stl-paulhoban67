@@ -1,5 +1,6 @@
 #pragma once
 #include <ostream>
+#include <istream>
 using namespace std;
 
 class Products
@@ -10,10 +11,12 @@ private:
 	char* name;
 	float price;
 public:
+
 	Products();
 	Products(int id, const char* code, const char* name, float price);
 	Products(const Products& p);
 	~Products();
+
 	int get_id();
 	char* get_code();
 	char* get_name();
@@ -21,7 +24,9 @@ public:
 	void set_code(const char* code);
 	void set_name(const char* name);
 	void set_price(float price);
+
 	Products& operator=(const Products& p);
 	bool operator==(const Products& p);
 	friend ostream& operator<<(ostream& os, const Products& p);
+	friend istream& operator>>(istream& is, Products& p);
 };
